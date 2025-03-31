@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    font-family: "Sometype Mono", "monospace";
+    background-color: #07101D;
+}
+
+@media (min-width: 320px) {
+    .default-margin {
+      margin: 0 16px 0 16px;
+    }
+  
+    .default-flex {
+      flex-direction: column;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .default-margin {
+      margin: 0 20px 0 20px;
+    }
+  }
+  
+  @media (min-width: 1152px) {
+    .default-margin {
+      margin: 0 32px 0 32px;
+    }
+  
+    .nav-toggle {
+      display: none;
+    }
+  
+    .mobile-nav {
+      display: none;
+    }
+  
+    .web-nav {
+      display: flex;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    /* .mobile-nav {
+      display: none;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .web-nav {
+      display: flex;
+    } */
+    .default-margin {
+      margin: 0 220px 0 220px;
+    }
+  }
+  
+  @media (min-width: 1920px) {
+    .default-margin {
+      margin: 0 220px 0 220px;
+    }
+  }
