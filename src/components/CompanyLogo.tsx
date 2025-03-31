@@ -1,6 +1,5 @@
 const CompanyLogo = ({
   textClass,
-  imgClass,
 }: {
   textClass?: string;
   imgClass?: string;

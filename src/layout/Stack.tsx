@@ -1,5 +1,3 @@
-import React from 'react';
-
 const stack = [
   { title: 'HTML', src: '/html.png' },
   { title: 'CSS', src: '/css.png' },
