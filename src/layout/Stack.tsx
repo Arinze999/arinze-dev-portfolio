@@ -16,8 +16,8 @@ const Stack = () => {
   return (
     <div className="default-margin flex justify-center items-center py-[4rem] md:py-0 md:pb-[4rem]">
       <div className="w-full max-w-[1225px] bg-lightBlue opacity-88 h-fited rounded-[20px] p-[2rem] flex flex-col items-center">
-        <h3 className="text-[32px] font-[600]">My Tech Stack</h3>
-        <ul className="w-full h-full p-[1rem] grid grid-cols-2 gap-[2rem] md:flex md:flex-wrap md:items-center md:justify-center">
+        <h3 className="text-[32px] font-[600] mb-[1rem]">My Tech Stack</h3>
+        <ul className="w-full h-full justify-center gap-[1rem] max-w-[1000px]  flex flex-wrap items-center ">
           {stack.map((tool, index) => (
             <li
               key={index}

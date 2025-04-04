@@ -23,6 +23,9 @@
   --color-dullGreen: #48e49e;
   --color-lightBlue: #CCEEFE;
   --color-faintBlueText: #fefefe;
+  --color-dullBlue: #15345F;
+
+  
 
   /* Custom Breakpoints */
   --breakpoint-mlg: 64rem; /* 1024px */

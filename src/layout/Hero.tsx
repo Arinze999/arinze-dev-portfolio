@@ -3,7 +3,7 @@ import ScrewIcon from '../components/icons/ScrewIcon';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen h-fit pt-[5rem] md:pt-0 flex justify-center items-center lg:pb-[0] text-myWhite">
+    <div className="min-h-screen h-fit pt-[8rem] md:pt-[5rem] lg:pt-0 flex justify-center lg:items-center lg:pb-[0] text-myWhite">
       <div className="default-margin">
         {/* big web */}
         {/* <div className="w-full h-full hidden 2xl:block absolute top-0 left-0 opacity-30">
@@ -46,7 +46,7 @@ const Hero = () => {
           />
         </div> */}
         <div className="flex justify-center items-center flex-col lg:flex-row lg:justify-between lg:items-center 2xl:place-items-center gap-[3rem]">
-          <div className="flex flex-col justify-center lg:items-start items-center h-fit">
+          <div className="flex flex-col lg:justify-center lg:items-start items-center h-fit">
             <p className="text-center lg:text-left text-xl">__Hi, I am...</p>
             <h1 className="text-[40px] font-[500] text-center lg:text-left">
               AKANAGA UZOMA ARINZE
@@ -69,7 +69,7 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div className="w-full h-[495px] max-w-[500px] flex justify-center items-center rounded-[20px] bg-myBg/10 backdrop-blur-lg relative overflow-hidden">
+          <div className="w-full h-[495px] max-w-[500px] md:flex justify-center items-center rounded-[20px] bg-myBg/10 backdrop-blur-lg relative overflow-hidden hidden">
             <img
               src="/gradient.svg"
               alt="gradient"
@@ -87,8 +87,8 @@ const Hero = () => {
             <div className="absolute z-[1] bottom-5 right-5">
               <ScrewIcon width="48px" color="#050C17" />
             </div>
-            <div className="opacity-95 bg-myBg3 rounded-[20px] flex justify-center items-center w-full max-w-[354px] h-[403px] overflow-hidden">
-              <img src="/portrait2.png" className="w-full h-auto" />
+            <div className="opacity-75 bg-myBg3 rounded-[20px] flex justify-center items-center w-full max-w-[354px] h-[403px] overflow-hidden">
+              <img src="/portrait.jpeg" className="w-full h-auto" />
             </div>
           </div>
         </div>
