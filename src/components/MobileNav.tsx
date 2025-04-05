@@ -21,7 +21,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-myBg3 border-b-[2px] border-b-myBg shadow pb-[1rem] z-[-10] transition-transform duration-300 mobile-nav ${
+      className={`fixed top-0 left-0 w-full bg-myBg3 border-b-[1px] border-b-myBg/50 shadow pb-[1rem] z-[-10] transition-transform duration-300 mobile-nav ${
         isOpen ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
@@ -39,7 +39,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen }) => {
         ))}
       </ul>
       <div className="px-4 py-2 flex gap-2 md:hidden">
-        <Button className="bg-dullGreen text-myBg3 rounded-[10px]" text="__contact me" />
+        <Button className="bg-dullGreen text-myBg3 rounded-[10px] py-[10px] px-[20px]" text="__contact me" />
       </div>
     </div>
   );

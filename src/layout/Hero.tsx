@@ -65,7 +65,7 @@ const Hero = () => {
               />
               <Button
                 text="__Download CV"
-                className="border-[2px] border-myWhite text-myWhite h-[3rem] w-fit rounded-[50px]"
+                className="border-[2px] border-myWhite text-myWhite h-[3rem] w-fit rounded-[50px] py-[10px] px-[20px]"
               />
             </div>
           </div>
