@@ -3,6 +3,7 @@
 body {
     font-family: "Sometype Mono", "monospace";
     background-color: #07101D;
+    overflow-x: hidden;
 }
 
 @media (min-width: 320px) {
