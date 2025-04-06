@@ -1,6 +1,15 @@
 import Button from '../components/Button';
 
 const About = () => {
+  const openGit = () => {
+    // Replace 'document.pdf' with your PDF file name.
+    window.open(
+      'https://github.com/Arinze999',
+      '_blank',
+      'noopener,noreferrer'
+    );
+  };
+
   return (
     <div className="py-[3rem] md:py-[5rem] flex justify-center items-center bg-dullBlue text-myWhite relative">
       {/* big web */}
@@ -66,8 +75,10 @@ const About = () => {
             </div>
             <div className="flex justify-center lg:block">
               <Button
-                text="__Hire Me"
-                className="w-[154px] h-[52px] border rounded-3xl"
+                text="__Git Hub"
+                className="w-[154px] h-[52px] border rounded-3xl cursor-pointer"
+                git
+                onClick={openGit}
               />
             </div>
           </div>

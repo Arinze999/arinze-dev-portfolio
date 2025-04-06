@@ -1,7 +1,18 @@
 import Button from '../components/Button';
+import ContactInfo from '../components/ContactInfo';
 import ScrewIcon from '../components/icons/ScrewIcon';
+import ModalTrigger from '../components/modal/ModalTrigger';
 
 const Hero = () => {
+  const openPdf = () => {
+    // Replace 'document.pdf' with your PDF file name.
+    window.open(
+      '/pdf/Arinze_DevCVmain2025(updated).pdf',
+      '_blank',
+      'noopener,noreferrer'
+    );
+  };
+
   return (
     <div className="min-h-screen h-fit pt-[8rem] md:pt-[5rem] lg:pt-0 flex justify-center lg:items-center lg:pb-[0] text-myWhite">
       <div className="default-margin">
@@ -59,13 +70,16 @@ const Hero = () => {
               visualization on the web</>`}
             </p>
             <div className="flex gap-5">
-              <Button
-                text="__Lets talk"
-                className="bg-dullGreen text-myBg3 h-[3rem] w-[158px] rounded-[50px]"
-              />
+              <ModalTrigger modalContent={<ContactInfo />}>
+                <Button
+                  text="__Lets talk"
+                  className="bg-dullGreen text-myBg3 h-[3rem] w-[158px] rounded-[50px]"
+                />
+              </ModalTrigger>
               <Button
                 text="__Download CV"
                 className="border-[2px] border-myWhite text-myWhite h-[3rem] w-fit rounded-[50px] py-[10px] px-[20px]"
+                onClick={openPdf}
               />
             </div>
           </div>

@@ -27,7 +27,7 @@ const DirectMessage: React.FC<DirectMessageProps> = ({ phoneNumber }) => {
       />
       <button
         type="submit"
-        className="flex justify-around w-fit gap-5 items-center bg-dullGreen text-white px-4 py-2 rounded-md hover:bg-myGreen transition-colors"
+        className="flex cursor-pointer justify-around w-fit gap-5 items-center hover:bg-dullGreen text-white px-4 py-2 rounded-md bg-myGreen transition-colors"
       >
         Direct Message
         <img src="/wazap.png" alt="wazap" />
