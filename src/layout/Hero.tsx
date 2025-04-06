@@ -69,11 +69,12 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div className="w-full h-[495px] max-w-[500px] md:flex justify-center items-center rounded-[20px] bg-myBg/10 backdrop-blur-lg relative overflow-hidden hidden">
+          <div className="w-full h-[495px] max-w-[500px] md:flex justify-center items-center rounded-[20px] bg-myBg/10 backdrop-blur-lg relative  hidden">
             <img
               src="/gradient.svg"
               alt="gradient"
-              className="absolute top-0 bottom-0 right-0 z-[-1]"
+              className="absolute top-0 bottom-0 right-0 z-[-1] transform scale-[1.3]"
+              style={{ filter: 'blur(120px)' }}
             />
             <div className="absolute z-[1] top-5 left-5">
               <ScrewIcon width="48px" color="#050C17" />

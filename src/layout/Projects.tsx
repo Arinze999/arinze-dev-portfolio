@@ -12,7 +12,7 @@ const Projects = () => {
           <img
             src="/projectsBg.png"
             alt="wavylines"
-            className="w-full h-full object-cover lg:object-contain max-w-[1000px] max-h-[1000px]"
+            className="w-full h-full transform scale-[3] md:scale-100 object-cover lg:object-contain max-w-[1000px] max-h-[1000px]"
             style={{ filter: 'blur(180px)' }}
           />
         </div>
