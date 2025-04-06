@@ -49,10 +49,10 @@ const About = () => {
             <h1 className="text-[18px] font-[500] text-center lg:text-left mb-[1rem]">
               {`<>From Surveying to Front-End Development<> `}
             </h1>
-            <p className="text-center lg:text-left max-w-[700px] text-xl mb-[5rem] md:mb-[3rem]">
-              {`<p>...My journey began with a simple curiosity—how do websites work? That curiosity turned into a passion, leading me to self-teach web development and master HTML, CSS, JavaScript, React, and Tailwind. `}{' '}
+            <p className="text-center text-[15px] md:text-[16px] lg:text-left max-w-[700px] text-xl mb-[5rem] md:mb-[3rem]">
+              {`...My journey began with a simple curiosity—how do websites work? That curiosity turned into a passion, leading me to self-teach web development and master HTML, CSS, JavaScript, React, and Tailwind. `}{' '}
               <br />
-              {`Now, I bring creativity, logic, and user-first design to every project, building seamless digital experiences. Always learning, always creating—let’s build something great together! </p>`}{' '}
+              {`Now, I bring creativity, logic, and user-first design to every project, building seamless digital experiences. Always learning, always creating—let’s build something great together!`}{' '}
             </p>
             <div className="flex justify-between mb-[3rem]">
               <p className="text-myGreen">

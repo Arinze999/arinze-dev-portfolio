@@ -3,10 +3,10 @@
 body {
   font-family: 'Sometype Mono', 'monospace';
   background-color: #07101d;
-  overflow-x: hidden;
+
 }
 
-* {
+.abs {
   overflow-x: hidden;
 }
 

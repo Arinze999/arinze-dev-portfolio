@@ -8,7 +8,7 @@ const Projects = () => {
 
   return (
     <div className="py-[3rem] md:py-[5rem] flex justify-center items-center text-myWhite relative">
-        <div className="w-full h-full absolute top-0 left-0 opacity-30 z-[-1] flex justify-center items-center">
+        <div className="w-full h-full absolute abs top-0 left-0 opacity-30 z-[-1] flex justify-center items-center">
           <img
             src="/projectsBg.png"
             alt="wavylines"
