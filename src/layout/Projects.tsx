@@ -1,4 +1,3 @@
-
 import ProjectCard from './ProjectCard';
 import { projectsData } from './db/ProjectsData';
 
@@ -7,15 +6,18 @@ const Projects = () => {
   const rightProjects = projectsData.filter((_, index) => index % 2 !== 0);
 
   return (
-    <div className="py-[3rem] md:py-[5rem] flex justify-center items-center text-myWhite relative">
-        <div className="w-full h-full absolute abs top-0 left-0 opacity-30 z-[-1] flex justify-center items-center">
-          <img
-            src="/projectsBg.png"
-            alt="wavylines"
-            className="w-full h-full transform scale-[3] md:scale-100 object-cover lg:object-contain max-w-[1000px] max-h-[1000px]"
-            style={{ filter: 'blur(180px)' }}
-          />
-        </div>
+    <div
+      id="projects-section"
+      className="py-[3rem] md:py-[5rem] flex justify-center items-center text-myWhite relative"
+    >
+      <div className="w-full h-full absolute abs top-0 left-0 opacity-30 z-[-1] flex justify-center items-center">
+        <img
+          src="/projectsBg.png"
+          alt="wavylines"
+          className="w-full h-full transform scale-[3] md:scale-100 object-cover lg:object-contain max-w-[1000px] max-h-[1000px]"
+          style={{ filter: 'blur(180px)' }}
+        />
+      </div>
       <div className="default-margin flex flex-col justify-center items-center w-full">
         <h3 className="text-[44px] mb-[2rem]">PROJECTS</h3>
         <div className="grid md:grid-cols-2 w-full">

@@ -39,7 +39,7 @@ const Header = () => {
           </div>
           <HamburgerIcon2 isOpen={navOpen} onClick={toggleNav} />
         </div>
-        <MobileNav isOpen={navOpen} />
+        <MobileNav isOpen={navOpen} onClose={() => setNavOpen(false)} />
       </div>
     </header>
   );

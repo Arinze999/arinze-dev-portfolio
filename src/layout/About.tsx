@@ -11,7 +11,10 @@ const About = () => {
   };
 
   return (
-    <div className="py-[3rem] md:py-[5rem] flex justify-center items-center bg-dullBlue text-myWhite relative">
+    <div
+      id="about-section"
+      className="py-[3rem] md:py-[5rem] flex justify-center items-center bg-dullBlue text-myWhite relative"
+    >
       {/* big web */}
       <div className="w-full h-full hidden 2xl:block absolute top-0 left-0 opacity-30">
         <img src="/wavewebbig.svg" alt="wavylines" className="w-full h-full" />
@@ -59,7 +62,7 @@ const About = () => {
               {`<>From Surveying to Front-End Development<> `}
             </h1>
             <p className="text-center text-[15px] md:text-[16px] lg:text-left max-w-[700px] text-xl mb-[5rem] md:mb-[3rem]">
-              {`...My journey began with a simple curiosity—how do websites work? That curiosity turned into a passion, leading me to self-teach web development and master HTML, CSS, JavaScript, React, and Tailwind. `}{' '}
+              {`...My journey began with a simple curiosity—how do websites work? That curiosity turned into a passion, leading me to a self-taught web dev journey to properly understand HTML, CSS, JavaScript, React, and Tailwind among other tools and frameworks as well.`}{' '}
               <br />
               {`Now, I bring creativity, logic, and user-first design to every project, building seamless digital experiences. Always learning, always creating—let’s build something great together!`}{' '}
             </p>

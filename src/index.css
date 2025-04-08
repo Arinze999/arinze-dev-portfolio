@@ -1,10 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
+:root {
+  --color-myGreen: #19f17a;
+  --color-myBg: #314a63;
+  --color-myBg2: #0d1117;
+  --color-myBg3: #07101D;
+  --color-dullGreen: #48e49e;
+}
+
+
 body {
   font-family: 'Sometype Mono', 'monospace';
   background-color: #07101d;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-myGreen) var(--color-myBg);
 
 }
+
+/* WebKit scrollbar styling */
+body::-webkit-scrollbar {
+  width: 12px;    /* Width of the vertical scrollbar */
+  height: 12px;   /* Height of the horizontal scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-myBg); /* Background for the track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-myGreen); /* Thumb color */
+  border-radius: 10px;              /* Rounded corners */
+  border: 3px solid var(--color-myBg); /* Optional: Creates spacing around thumb matching your background */
+}
+
+/* Optional: Change thumb color on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dullGreen);
+}
+
 
 .abs {
   overflow-x: hidden;

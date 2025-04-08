@@ -1,24 +1,16 @@
 export const projectsData = [
   {
-    title: 'CoinKepp',
+    title: 'Landing Pages',
     description:
-      'Coinkeep is a Web3 demo built with JavaScript, React, and Tailwind CSS. It lets users view cryptocurrency prices, read crypto news, and track live trends. Users can sign up—or sign in with Google on PC—and, using ethers.js, connect their MetaMask wallet (PC only) to view their address and balance.',
-    link: 'https://coinkeep.vercel.app/',
-    code: 'https://github.com/Arinze999/coinkeep',
-    tools: ['/react.png', '/tailwind.png', '/firebase.png'],
-    date: 'December 2024',
-    src: '/coinkeep.png',
+      'This a series of static single page landing pages for various sectors: SAAS sector, NGO sector..... the aim is focused on accessibility and responsiveness accross various modern day gadgets to maintain integrity of information.',
+    link: 'https://whitepace-chi.vercel.app/',
+    code: 'https://github.com/Arinze999/whitepace',
+    tools: ['/react.png', '/tailwind.png', '/ts.png'],
+    date: 'March 2025',
+    src: 'landing.png',
+    view: 'View',
   },
-  {
-    title: 'MovieZone',
-    description:
-      'MovieZone is a dynamic React app with Tailwind CSS styling, leveraging Firebase for seamless user authentication and cloud storage. Integrating TMDB API, it delivers up-to-date movie data. Users can explore, track favorites, and personalize their movie experience effortlessly, ensuring a responsive and engaging platform for movie enthusiasts.',
-    link: 'https://movies-react-748e7.web.app/',
-    code: 'https://github.com/Arinze999/moviezone',
-    tools: ['/react.png', '/tailwind.png', '/firebase.png'],
-    date: 'January 2024',
-    src: '/moviezone.png',
-  },
+
   {
     title: 'CarBuddy',
     description:
@@ -29,6 +21,18 @@ export const projectsData = [
     date: 'October 2023',
     src: '/carbuddy.png',
   },
+
+  {
+    title: 'CoinKepp',
+    description:
+      'Coinkeep is a Web3 demo built with JavaScript, React, and Tailwind CSS. It lets users view cryptocurrency prices, read crypto news, and track live trends. Users can sign up—or sign in with Google on PC—and, using ethers.js, connect their MetaMask wallet (PC only) to view their address and balance.',
+    link: 'https://coinkeep.vercel.app/',
+    code: 'https://github.com/Arinze999/coinkeep',
+    tools: ['/react.png', '/tailwind.png', '/firebase.png'],
+    date: 'December 2024',
+    src: '/coinkeep.png',
+  },
+
   {
     title: 'Inventory System',
     description:
@@ -38,5 +42,16 @@ export const projectsData = [
     tools: ['/html.png', '/css.png', '/js.png', '/bootstrap.png'],
     date: 'September 2023',
     src: '/inventory.jpg',
+  },
+
+  {
+    title: 'MovieZone',
+    description:
+      'MovieZone is a dynamic React app with Tailwind CSS styling, leveraging Firebase for seamless user authentication and cloud storage. Integrating TMDB API, it delivers up-to-date movie data. Users can explore, track favorites, and personalize their movie experience effortlessly, ensuring a responsive and engaging platform for movie enthusiasts.',
+    link: 'https://movies-react-748e7.web.app/',
+    code: 'https://github.com/Arinze999/moviezone',
+    tools: ['/react.png', '/tailwind.png', '/firebase.png'],
+    date: 'January 2024',
+    src: '/moviezone.png',
   },
 ];

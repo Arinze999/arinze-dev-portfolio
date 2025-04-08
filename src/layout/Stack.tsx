@@ -6,7 +6,7 @@ const stack = [
   { title: 'Bootstrap', src: '/bootstrap.png' },
   { title: 'Tailwind', src: '/tailwind.png' },
   { title: 'React', src: '/react.png' },
-  { title: 'NextJS', src: '/next.png' },
+  { title: 'NextJS', src: '/nextwhite.png' },
   { title: 'Firebase', src: '/firebase.png' },
   { title: 'Supabase', src: '/supabase.png' },
   { title: 'MySQL', src: '/sql.png' },

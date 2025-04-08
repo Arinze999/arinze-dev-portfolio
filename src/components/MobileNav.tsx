@@ -5,21 +5,38 @@ import ContactInfo from '../components/ContactInfo';
 
 type MobileNavProps = {
   isOpen: boolean;
+  onClose: () => void;
 };
 
 const navItems = [
-  { title: '__hello', dropdown: ['Overview', 'Pricing', 'Customer stories'] },
+  {
+    title: '__hello',
+    sectionId: 'hello-section',
+    dropdown: ['Overview', 'Pricing', 'Customer stories'],
+  },
   {
     title: '__about me',
-    dropdown: ['Colaboration', 'Productivity', 'Task Managemnt'],
+    sectionId: 'about-section',
+    dropdown: ['Collaboration', 'Productivity', 'Task Management'],
   },
   {
     title: '__projects',
+    sectionId: 'projects-section',
     dropdown: ['Blog', 'Guides & Tutorials', 'Help center'],
   },
 ];
 
-const MobileNav: React.FC<MobileNavProps> = ({ isOpen }) => {
+const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
+  // Function to scroll to the target section
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // Scroll smoothly to the element
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    onClose();
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 w-full bg-myBg3 border-b-[1px] border-b-myBg/50 shadow pb-[1rem] z-[-10] transition-transform duration-300 mobile-nav ${
@@ -30,7 +47,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen }) => {
         {navItems.map((item, index) => (
           <li key={index}>
             <div className="flex justify-between items-center px-4 py-2 cursor-pointer">
-              <span className="text-[16px] hover:text-dullYellow">
+              <span
+                onClick={() => handleScroll(item.sectionId)}
+                className="text-[16px] hover:text-dullYellow"
+              >
                 {item.title}
               </span>
             </div>

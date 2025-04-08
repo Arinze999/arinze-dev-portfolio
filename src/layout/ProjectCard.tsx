@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../components/Button';
+import ModalTrigger from '../components/modal/ModalTrigger';
 
 interface ProjectCardProps {
   title: string;
@@ -9,6 +10,7 @@ interface ProjectCardProps {
   tools: string[];
   date: string;
   src: string;
+  view?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,6 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   tools,
   date,
   src,
+  view,
 }) => {
   const handleLink = () => {
     window.open(link, '_blank');
@@ -38,20 +41,54 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           _{title}
           <span className="text-myGreen text-[14px]"> {date}</span>
         </p>
-        <div className="mt-3 flex gap-[2rem] items-center">
-          <Button
-            text="_View Code"
-            git
-            className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
-            onClick={handleCode}
-          />
-          <Button
-            text="_Live Demo"
-            live
-            className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
-            onClick={handleLink}
-          />
-        </div>
+        {view ? (
+          <div className="mt-3 flex gap-[2rem] items-center">
+            <ModalTrigger
+              modalContent={
+                <ul className="text-myWhite pb-[1rem] border-b">
+                  <li>
+                    <a href="">WhitePace</a> <br />
+                    <small>SAAS Landing Page</small>
+                    <div className="mt-3 flex gap-[2rem] items-center">
+                      <Button
+                        text="_View Code"
+                        git
+                        className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
+                        onClick={handleCode}
+                      />
+                      <Button
+                        text="_Live Demo"
+                        live
+                        className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
+                        onClick={handleLink}
+                      />
+                    </div>
+                  </li>
+                </ul>
+              }
+            >
+              <Button
+                text="_View"
+                className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
+              />
+            </ModalTrigger>
+          </div>
+        ) : (
+          <div className="mt-3 flex gap-[2rem] items-center">
+            <Button
+              text="_View Code"
+              git
+              className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
+              onClick={handleCode}
+            />
+            <Button
+              text="_Live Demo"
+              live
+              className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
+              onClick={handleLink}
+            />
+          </div>
+        )}
         <p className="mt-3 text-[15px]">{description}</p>
         <div className="mt-3 w-fit border p-3 rounded-3xl flex gap-2 items-center">
           <p>Tools Used</p>
