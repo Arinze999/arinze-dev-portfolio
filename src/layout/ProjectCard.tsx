@@ -5,12 +5,14 @@ import ModalTrigger from '../components/modal/ModalTrigger';
 interface ProjectCardProps {
   title: string;
   description: string;
-  link: string;
-  code: string;
+  link?: string;
+  code?: string;
   tools: string[];
   date: string;
   src: string;
   view?: string;
+  links?: string[];
+  codes?: string[];
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -22,6 +24,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   date,
   src,
   view,
+  links,
+  codes,
 }) => {
   const handleLink = () => {
     window.open(link, '_blank');
@@ -29,6 +33,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   const handleCode = () => {
     window.open(code, '_blank');
+  };
+
+  const handleLinks = (index: number) => {
+    if (view) {
+      if (links && links.length > index) {
+        window.open(links[index], '_blank');
+      }
+    }
+  };
+
+  const handleCodes = (index: number) => {
+    if (view) {
+      if (codes && codes.length > index) {
+        window.open(codes[index], '_blank');
+      }
+    }
   };
 
   return (
@@ -45,22 +65,40 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="mt-3 flex gap-[2rem] items-center">
             <ModalTrigger
               modalContent={
-                <ul className="text-myWhite pb-[1rem] border-b">
-                  <li>
-                    <a href="">WhitePace</a> <br />
+                <ul className="text-myWhite pb-[1rem]">
+                  <li className="py-[1rem] border-b">
+                    <p>HOPE</p> <br />
+                    <small>NGO Landing Page</small>
+                    <div className="mt-3 flex gap-[2rem] items-center">
+                      <Button
+                        text="_View Code"
+                        git
+                        className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
+                        onClick={() => handleCodes(0)}
+                      />
+                      <Button
+                        text="_Live Demo"
+                        live
+                        className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
+                        onClick={() => handleLinks(0)}
+                      />
+                    </div>
+                  </li>
+                  <li className="py-[1rem] border-b">
+                    <p>WhitePace</p> <br />
                     <small>SAAS Landing Page</small>
                     <div className="mt-3 flex gap-[2rem] items-center">
                       <Button
                         text="_View Code"
                         git
-                        className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
-                        onClick={handleCode}
+                        className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
+                        onClick={() => handleCodes(1)}
                       />
                       <Button
                         text="_Live Demo"
                         live
-                        className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
-                        onClick={handleLink}
+                        className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
+                        onClick={() => handleLinks(1)}
                       />
                     </div>
                   </li>
