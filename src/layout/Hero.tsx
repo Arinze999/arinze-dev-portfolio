@@ -7,14 +7,17 @@ const Hero = () => {
   const openPdf = () => {
     // Replace 'document.pdf' with your PDF file name.
     window.open(
-      '/pdf/Arinze_DevCVmain2025(updated).pdf',
+      '/pdf/ArinzeDeveloperCV-Frontend.pdf',
       '_blank',
       'noopener,noreferrer'
     );
   };
 
   return (
-    <div id="hello-section" className="min-h-screen h-fit pt-[8rem] md:pt-[5rem] lg:pt-0 flex justify-center lg:items-center lg:pb-[0] text-myWhite overflow-hidden">
+    <div
+      id="hello-section"
+      className="min-h-screen h-fit pt-[8rem] md:pt-[5rem] lg:pt-0 flex justify-center lg:items-center lg:pb-[0] text-myWhite overflow-hidden"
+    >
       <div className="default-margin w-full">
         {/* big web */}
         {/* <div className="w-full h-full hidden 2xl:block absolute top-0 left-0 opacity-30">
