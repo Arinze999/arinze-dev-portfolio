@@ -1,5 +1,20 @@
 export const projectsData = [
   {
+    title: 'MaxiPhones',
+    description:
+      'MaxiPhones is a modern e-commerce gadget store offering top-brand smartphones, accessories, and unbeatable deals. With a responsive interface, secure checkout, and Paystack integration, users enjoy a seamless shopping experience from cart to order confirmation.',
+    link: 'https://maxi-phones.vercel.app',
+    code: 'https://github.com/Arinze999/maxi-phones', // replace with actual repo if available
+    tools: [
+      '/nextwhite.png',
+      '/tailwind.png',
+      '/ts.png',
+      '/supabase.png',
+    ],
+    date: 'June 2025',
+    src: '/maxi.png', // replace with actual image path if different
+  },
+  {
     title: 'Landing Pages',
     description:
       'This a series of static single page landing pages for various sectors: SAAS sector, NGO sector..... the aim is focused on accessibility and responsiveness accross various modern day gadgets to maintain integrity of information.',

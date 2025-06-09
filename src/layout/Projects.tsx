@@ -20,7 +20,7 @@ const Projects = () => {
       </div>
       <div className="default-margin flex flex-col justify-center items-center w-full">
         <h3 className="text-[44px] mb-[2rem]">PROJECTS</h3>
-        <div className="grid md:grid-cols-2 w-full">
+        <div className="md:grid md:grid-cols-2 w-full hidden">
           {/* Left column */}
           <div className="flex flex-col md:w-[90%] border-[1px] border-myGreen border-l-0 border-b-0 mx-auto md:mx-0 md:ml-auto">
             {leftProjects.map((project, index) => (
@@ -31,6 +31,13 @@ const Projects = () => {
           {/* Right column with a step down effect */}
           <div className="flex flex-col md:mt-[6rem] md:w-[90%] border-[1px] border-myGreen border-r-0 border-b-0 mx-auto md:mx-0 mr-auto">
             {rightProjects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </div>
+          <div className="md:hidden w-full block">
+         <div className="flex flex-col md:mt-[6rem] md:w-[90%] border-[1px] border-myGreen border-r-0 border-b-0 mx-auto md:mx-0 mr-auto">
+            {projectsData.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </div>
