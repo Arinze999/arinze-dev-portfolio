@@ -74,7 +74,7 @@ const Hero = () => {
   return (
     <div
       id="hello-section"
-      className="min-h-screen h-fit pt-[8rem] md:pt-[5rem] lg:pt-0 flex justify-center lg:items-center lg:pb-[0] text-myWhite overflow-hidden"
+      className="min-h-screen h-fit pt-[7rem] md:pt-[5rem] lg:pt-0 flex justify-center lg:items-center lg:pb-[0] text-myWhite overflow-hidden"
     >
       <div className="default-margin w-full">
         <div className="flex justify-center items-center flex-col lg:flex-row lg:justify-between lg:items-center 2xl:place-items-center gap-[3rem]">
