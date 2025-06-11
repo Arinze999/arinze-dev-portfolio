@@ -97,3 +97,26 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0 220px 0 220px;
   }
 }
+
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor2::after {
+  content: '.';
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+

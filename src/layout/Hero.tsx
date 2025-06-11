@@ -1,11 +1,69 @@
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
 import Button from '../components/Button';
 import ContactInfo from '../components/ContactInfo';
 import ScrewIcon from '../components/icons/ScrewIcon';
 import ModalTrigger from '../components/modal/ModalTrigger';
 
+gsap.registerPlugin(TextPlugin);
+
 const Hero = () => {
+  const hiRef = useRef<HTMLParagraphElement>(null);
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const roleRef = useRef<HTMLParagraphElement>(null);
+  const loopTextRef = useRef<HTMLParagraphElement>(null);
+
+  const descriptions = [
+    'I focus on creating dynamic and innovative contents and visualization on the web...',
+    'Turning ideas into interactive web experiences...',
+    'Colaborating with teams, to bring features to life and brainstorm solutions to problems...',
+    'Writing clean and reusable code...',
+    'Making your website seen, by applying SEO best practices and techniques...',
+    'Designing responsive layouts and optimizing website performance accross devices...',
+  ];
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
+
+    tl.to(hiRef.current, { text: '__Hi, I am...', duration: 2, delay: 0.5 })
+      .to(
+        nameRef.current,
+        { text: 'AKANAGA UZOMA ARINZE', duration: 2 },
+        '+=0.3'
+      )
+      .to(
+        roleRef.current,
+        { text: '> Front-End Web Developer.', duration: 2 },
+        '+=0.3'
+      )
+      .add(() => {
+        // Start loop after above animations
+        loopTyping();
+      });
+
+    let index = 0;
+    const loopTyping = () => {
+      gsap.to(loopTextRef.current, {
+        text: descriptions[index],
+        duration: 5, // slower typing
+        ease: 'none',
+        onComplete: () => {
+          gsap.to(loopTextRef.current, {
+            text: '',
+            duration: 3,
+            delay: 3,
+            onComplete: () => {
+              index = (index + 1) % descriptions.length;
+              loopTyping();
+            },
+          });
+        },
+      });
+    };
+  }, []);
+
   const openPdf = () => {
-    // Replace 'document.pdf' with your PDF file name.
     window.open(
       '/pdf/ArinzeDeveloperCV-Frontend.pdf',
       '_blank',
@@ -19,59 +77,21 @@ const Hero = () => {
       className="min-h-screen h-fit pt-[8rem] md:pt-[5rem] lg:pt-0 flex justify-center lg:items-center lg:pb-[0] text-myWhite overflow-hidden"
     >
       <div className="default-margin w-full">
-        {/* big web */}
-        {/* <div className="w-full h-full hidden 2xl:block absolute top-0 left-0 opacity-30">
-          <img
-            src="/assets/svg/wavewebbig.svg"
-            alt="wavylines"
-            className="w-full h-full"
-          />
-        </div> */}
-        {/* web */}
-        {/* <div className="w-full h-full hidden xl:block 2xl:hidden absolute top-0 left-0 opacity-30">
-          <img
-            src="/assets/svg/waveweb.svg"
-            alt="wavylines"
-            className="w-full h-full"
-          />
-        </div> */}
-        {/* small web */}
-        {/* <div className="w-full h-full hidden lg:block xl:hidden absolute top-[-2.25rem] left-0 opacity-30">
-          <img
-            src="/assets/svg/wavewebsmall.svg"
-            alt="wavylines"
-            className="w-full h-full"
-          />
-        </div> */}
-        {/* tablet */}
-        {/* <div className="w-full h-full hidden md:block mlg:top-[8.5rem] lg:hidden absolute top-0 left-0 opacity-30">
-          <img
-            src="/assets/svg/wavetablet.svg"
-            alt="wavylines"
-            className="w-full h-full"
-          />
-        </div> */}
-        {/* mobile */}
-        {/* <div className="w-full auto md:hidden block absolute top-0 left-0 opacity-30">
-          <img
-            src="/assets/svg/wavemobile.svg"
-            alt="wavylines"
-            className="w-full h-full"
-          />
-        </div> */}
         <div className="flex justify-center items-center flex-col lg:flex-row lg:justify-between lg:items-center 2xl:place-items-center gap-[3rem]">
           <div className="flex flex-col lg:justify-center lg:items-start items-center h-fit">
-            <p className="text-center lg:text-left text-xl">__Hi, I am...</p>
-            <h1 className="text-[40px] font-[500] text-center lg:text-left">
-              AKANAGA UZOMA ARINZE
-            </h1>
-            <p className="text-myGreen text-center lg:text-left text-xl font-[300] mb-[5rem] md:mb-[3rem]">
-              {`> Front-End Web Developer.`}
-            </p>
-            <p className="text-center lg:text-left max-w-[700px] text-xl mb-[5rem] md:mb-[3rem]">
-              {`<>I focus on creating dynamic and innovative contents and
-              visualization on the web</>`}
-            </p>
+            <p ref={hiRef} className="text-center lg:text-left text-xl h-[2rem]"></p>
+            <h1
+              ref={nameRef}
+              className="text-[40px] font-[500] text-center lg:text-left md:h-[4rem] h-[10rem]"
+            ></h1>
+            <p
+              ref={roleRef}
+              className="text-myGreen typing-cursor2 text-center lg:text-left text-xl font-[300] mb-[5rem] md:mb-[3rem] h-[2rem]"
+            ></p>
+            <p
+              ref={loopTextRef}
+              className="typing-cursor text-center lg:text-left max-w-[700px] text-xl mb-[5rem] md:mb-[3rem] h-[4rem]"
+            ></p>
             <div className="flex gap-5">
               <ModalTrigger modalContent={<ContactInfo />}>
                 <Button
@@ -86,7 +106,9 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div className="w-full h-[495px] max-w-[500px] md:flex justify-center items-center rounded-[20px] bg-myBg/10 backdrop-blur-lg relative  hidden">
+
+          {/* IMAGE AND FRAME */}
+          <div className="w-full h-[495px] max-w-[500px] md:flex justify-center items-center rounded-[20px] bg-myBg/10 backdrop-blur-lg relative hidden">
             <img
               src="/gradient.svg"
               alt="gradient"
