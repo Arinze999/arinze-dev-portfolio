@@ -15,9 +15,9 @@ const Hero = () => {
   const loopTextRef = useRef<HTMLParagraphElement>(null);
 
   const descriptions = [
-    'I focus on creating dynamic and innovative contents and visualization on the web...',
+    'I focus on creating dynamic, innovative contents and visualization on the web...',
     'Turning ideas into interactive web experiences...',
-    'Colaborating with teams, to bring features to life and brainstorm solutions to problems...',
+    'Colaborating with teams, to bring features to life and brainstorm to provide solutions to problems...',
     'Writing clean and reusable code...',
     'Making your website seen, by applying SEO best practices and techniques...',
     'Designing responsive layouts and optimizing website performance accross devices...',
@@ -26,21 +26,14 @@ const Hero = () => {
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
 
-    tl.to(hiRef.current, { text: '__Hi, I am...', duration: 2, delay: 0.5 })
-      .to(
-        nameRef.current,
-        { text: 'AKANAGA UZOMA ARINZE', duration: 2 },
-        '+=0.3'
-      )
-      .to(
-        roleRef.current,
-        { text: '> Front-End Web Developer.', duration: 2 },
-        '+=0.3'
-      )
-      .add(() => {
-        // Start loop after above animations
-        loopTyping();
-      });
+    tl.to(
+      roleRef.current,
+      { text: '> Front-End Web Developer.', duration: 2 },
+      '+=0.3'
+    ).add(() => {
+      // Start loop after above animations
+      loopTyping();
+    });
 
     let index = 0;
     const loopTyping = () => {
@@ -79,11 +72,18 @@ const Hero = () => {
       <div className="default-margin w-full">
         <div className="flex justify-center items-center flex-col lg:flex-row lg:justify-between lg:items-center 2xl:place-items-center gap-[3rem]">
           <div className="flex flex-col lg:justify-center lg:items-start items-center h-fit">
-            <p ref={hiRef} className="text-center lg:text-left text-xl h-[2rem]"></p>
+            <p
+              ref={hiRef}
+              className="text-center lg:text-left text-xl h-[2rem]"
+            >
+              __Hi, I am...
+            </p>
             <h1
               ref={nameRef}
               className="text-[40px] font-[500] text-center lg:text-left md:h-[4rem] h-[10rem]"
-            ></h1>
+            >
+              AKANAGA UZOMA ARINZE
+            </h1>
             <p
               ref={roleRef}
               className="text-myGreen typing-cursor2 text-center lg:text-left text-xl font-[300] mb-[5rem] md:mb-[3rem] h-[2rem]"
