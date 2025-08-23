@@ -4,7 +4,7 @@ const Footer = () => {
   const openPdf = () => {
     // Replace 'document.pdf' with your PDF file name.
     window.open(
-      '/pdf/ArinzeDeveloperCV-Frontend.pdf',
+      '/pdf/ArinzeDeveloperCV-Frontend-August25.pdf',
       '_blank',
       'noopener,noreferrer'
     );

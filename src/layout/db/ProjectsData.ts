@@ -1,18 +1,30 @@
 export const projectsData = [
   {
-    title: 'MaxiPhones',
+    title: 'CONTENTFIX',
     description:
-      'MaxiPhones is a modern e-commerce gadget store offering top-brand smartphones, accessories, and unbeatable deals. With a responsive interface, secure checkout, and Paystack integration, users enjoy a seamless shopping experience from cart to order confirmation.',
-    link: 'https://maxi-phones.vercel.app',
-    code: 'https://github.com/Arinze999/maxi-phones', // replace with actual repo if available
+      'CONTENTFIX is a two‑app project (landing + dashboard) that lets users paste content → choose a format → generate ready‑to‑publish outputs. Built with Next.js, Tailwind CSS, TypeScript, and Supabase for auth/session. Powered by the DeepSeek R1 free AI API for conversions.',
+    links: ['https://contentfix-landing.vercel.app/', ''],
+    codes: ['https://github.com/Arinze999/contentfix-landing', ''],
     tools: [
       '/nextwhite.png',
       '/tailwind.png',
       '/ts.png',
       '/supabase.png',
+      '/deepseek.png',
     ],
+    date: 'August 2025',
+    src: '/contentfix.png',
+    view: 'contentfix',
+  },
+  {
+    title: 'MaxiPhones',
+    description:
+      'MaxiPhones is a modern e-commerce gadget store offering top-brand smartphones, accessories, and unbeatable deals. With a responsive interface, secure checkout, and Paystack integration, users enjoy a seamless shopping experience from cart to order confirmation.',
+    link: 'https://maxi-phones.vercel.app',
+    code: 'https://github.com/Arinze999/maxi-phones',
+    tools: ['/nextwhite.png', '/tailwind.png', '/ts.png', '/supabase.png'],
     date: 'June 2025',
-    src: '/maxi.png', // replace with actual image path if different
+    src: '/maxi.png',
   },
   {
     title: 'Landing Pages',
@@ -29,7 +41,7 @@ export const projectsData = [
     tools: ['/react.png', '/tailwind.png', '/ts.png', '/nextwhite.png'],
     date: 'March 2025',
     src: 'landing.png',
-    view: 'View',
+    view: 'land',
   },
 
   {

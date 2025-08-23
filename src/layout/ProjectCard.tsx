@@ -61,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           _{title}
           <span className="text-myGreen text-[14px]"> {date}</span>
         </p>
-        {view ? (
+        {view === 'land' ? (
           <div className="mt-3 flex gap-[2rem] items-center">
             <ModalTrigger
               modalContent={
@@ -100,6 +100,63 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
                         onClick={() => handleLinks(1)}
                       />
+                    </div>
+                  </li>
+                </ul>
+              }
+            >
+              <Button
+                text="_View"
+                className="border rounded-3xl text-[14px] py-[5px] px-[10px] hover:text-dullGreen"
+              />
+            </ModalTrigger>
+          </div>
+        ) : view === 'contentfix' ? (
+          <div className="mt-3 flex gap-[2rem] items-center">
+            <ModalTrigger
+              modalContent={
+                <ul className="text-myWhite pb-[1rem]">
+                  <li className="py-[1rem] border-b">
+                    <p>Landing Page</p> <br />
+                    <small>
+                      Explore the Quick try on the landing page to see a quick
+                      content enhancement
+                    </small>
+                    <div className="mt-3 flex gap-[2rem] items-center">
+                      <Button
+                        text="_View Code"
+                        git
+                        className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
+                        onClick={() => handleCodes(0)}
+                      />
+                      <Button
+                        text="_Live Demo"
+                        live
+                        className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
+                        onClick={() => handleLinks(0)}
+                      />
+                    </div>
+                  </li>
+                  <li className="py-[1rem] border-b">
+                    <p>Dashboard</p> <br />
+                    <small>
+                      Explore more features, like brand voive saving,
+                      personality, more context and a lot more customizable
+                      features (still in progress..)
+                    </small>
+                    <div className="mt-3 flex gap-[2rem] items-center">
+                      {/* <Button
+                        text="_View Code"
+                        git
+                        className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
+                        onClick={() => handleCodes(1)}
+                      />
+                      <Button
+                        text="_Live Demo"
+                        live
+                        className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
+                        onClick={() => handleLinks(1)}
+                      /> */}
                     </div>
                   </li>
                 </ul>
