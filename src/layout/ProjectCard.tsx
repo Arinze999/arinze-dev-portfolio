@@ -142,10 +142,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     <small>
                       Explore more features, like brand voive saving,
                       personality, more context and a lot more customizable
-                      features (still in progress..)
+                      features
                     </small>
                     <div className="mt-3 flex gap-[2rem] items-center">
-                      {/* <Button
+                      <Button
                         text="_View Code"
                         git
                         className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
@@ -156,7 +156,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         live
                         className="border rounded-3xl text-[14px] py-[2px] px-[7px] hover:text-dullGreen"
                         onClick={() => handleLinks(1)}
-                      /> */}
+                      />
                     </div>
                   </li>
                 </ul>

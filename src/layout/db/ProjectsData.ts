@@ -3,8 +3,8 @@ export const projectsData = [
     title: 'CONTENTFIX',
     description:
       'CONTENTFIX is a two‑app project (landing + dashboard) that lets users paste content → choose a format → generate ready‑to‑publish outputs. Built with Next.js, Tailwind CSS, TypeScript, and Supabase for auth/session. Powered by the DeepSeek R1 free AI API for conversions.',
-    links: ['https://contentfix-landing.vercel.app/', ''],
-    codes: ['https://github.com/Arinze999/contentfix-landing', ''],
+    links: ['https://contentfix-landing.vercel.app/', 'https://contentfix-dashboard.vercel.app/signin'],
+    codes: ['https://github.com/Arinze999/contentfix-landing', 'https://github.com/Arinze999/contentfix-dashboard'],
     tools: [
       '/nextwhite.png',
       '/tailwind.png',
