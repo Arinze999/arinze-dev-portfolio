@@ -4,7 +4,7 @@ const Footer = () => {
   const openPdf = () => {
     // Replace 'document.pdf' with your PDF file name.
     window.open(
-      '/pdf/ArinzeDeveloperCV-Frontend-August25.pdf',
+      '/pdf/Akanaga_Uzoma_Arinze_CV_2026.pdf',
       '_blank',
       'noopener,noreferrer'
     );

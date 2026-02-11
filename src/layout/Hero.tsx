@@ -29,7 +29,7 @@ const Hero = () => {
     tl.to(
       roleRef.current,
       { text: '> Front-End Web Developer.', duration: 2 },
-      '+=0.3'
+      '+=0.3',
     ).add(() => {
       // Start loop after above animations
       loopTyping();
@@ -54,13 +54,14 @@ const Hero = () => {
         },
       });
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const openPdf = () => {
     window.open(
-      '/pdf/ArinzeDeveloperCV-Frontend.pdf',
+      '/pdf/Akanaga_Uzoma_Arinze_CV_2026.pdf',
       '_blank',
-      'noopener,noreferrer'
+      'noopener,noreferrer',
     );
   };
 
