@@ -26,23 +26,23 @@ export const projectsData = [
     date: 'June 2025',
     src: '/maxi.png',
   },
-  {
-    title: 'Landing Pages',
-    description:
-      'This a series of static single page landing pages for various sectors: SAAS sector, NGO sector..... the aim is focused on accessibility and responsiveness accross various modern day gadgets to maintain integrity of information.',
-    links: [
-      'https://hope-ivory.vercel.app/',
-      'https://whitepace-chi.vercel.app/',
-    ],
-    codes: [
-      'https://github.com/Arinze999/hope',
-      'https://github.com/Arinze999/whitepace',
-    ],
-    tools: ['/react.png', '/tailwind.png', '/ts.png', '/nextwhite.png'],
-    date: 'March 2025',
-    src: 'landing.png',
-    view: 'land',
-  },
+  // {
+  //   title: 'Landing Pages',
+  //   description:
+  //     'This a series of static single page landing pages for various sectors: SAAS sector, NGO sector..... the aim is focused on accessibility and responsiveness accross various modern day gadgets to maintain integrity of information.',
+  //   links: [
+  //     'https://hope-ivory.vercel.app/',
+  //     'https://whitepace-chi.vercel.app/',
+  //   ],
+  //   codes: [
+  //     'https://github.com/Arinze999/hope',
+  //     'https://github.com/Arinze999/whitepace',
+  //   ],
+  //   tools: ['/react.png', '/tailwind.png', '/ts.png', '/nextwhite.png'],
+  //   date: 'March 2025',
+  //   src: 'landing.png',
+  //   view: 'land',
+  // },
 
   {
     title: 'CarBuddy',

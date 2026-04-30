@@ -2,7 +2,6 @@ import Button from '../components/Button';
 
 const About = () => {
   const openGit = () => {
-    // Replace 'document.pdf' with your PDF file name.
     window.open(
       'https://github.com/Arinze999',
       '_blank',
@@ -13,73 +12,87 @@ const About = () => {
   return (
     <div
       id="about-section"
-      className="py-[3rem] md:py-[5rem] flex justify-center items-center bg-dullBlue text-myWhite relative"
+      className="py-[3rem] md:py-[5rem] flex justify-center items-center bg-dullBlue text-myWhite relative overflow-hidden"
     >
       {/* big web */}
-      <div className="w-full h-full hidden 2xl:block absolute top-0 left-0 opacity-30">
-        <img src="/wavewebbig.svg" alt="wavylines" className="w-full h-full" />
+      <div className="pointer-events-none w-full h-full hidden 2xl:block absolute top-0 left-0 opacity-10 z-0">
+        <img
+          src="/wavewebbig.svg"
+          alt="wavylines"
+          className="w-full h-full"
+        />
       </div>
+
       {/* web */}
-      <div className="absolute top-0 left-0 h-full w-full opacity-20 hidden xl:block 2xl:hidden">
+      <div className="pointer-events-none absolute top-0 left-0 h-full w-full opacity-10 hidden xl:block 2xl:hidden z-0">
         <img
           src="/waveweb.svg"
-          alt="aver"
+          alt="wavylines"
           className="w-full h-full object-cover"
         />
-        {/* small web */}
-        <div className="w-full h-full hidden lg:block xl:hidden absolute top-[-2.25rem] left-0 opacity-30">
-          <img
-            src="/wavewebsmall.svg"
-            alt="wavylines"
-            className="w-full h-full"
-          />
-        </div>
-        {/* tablet */}
-        <div className="w-full h-full hidden md:block mlg:top-[8.5rem] lg:hidden absolute top-0 left-0 opacity-30">
-          <img
-            src="/wavetablet.svg"
-            alt="wavylines"
-            className="w-full h-full"
-          />
-        </div>
       </div>
-      <div className="default-margin">
+
+      {/* small web */}
+      <div className="pointer-events-none w-full h-full hidden lg:block xl:hidden absolute top-[-2.25rem] left-0 opacity-10 z-0">
+        <img
+          src="/wavewebsmall.svg"
+          alt="wavylines"
+          className="w-full h-full"
+        />
+      </div>
+
+      {/* tablet */}
+      <div className="pointer-events-none w-full h-full hidden md:block mlg:top-[8.5rem] lg:hidden absolute top-0 left-0 opacity-10 z-0">
+        <img
+          src="/wavetablet.svg"
+          alt="wavylines"
+          className="w-full h-full"
+        />
+      </div>
+
+      <div className="default-margin relative z-10">
         <div className="flex justify-center items-center flex-col lg:flex-row lg:justify-between lg:items-start gap-[3rem]">
           <div className="flex-1 relative">
-            <div className="w-[373px] h-[373px] flex justify-center items-start rounded-full overflow-hidden opacity-75">
+            <div className="w-[373px] h-[373px] flex justify-center items-start rounded-2xl overflow-hidden opacity-75">
               <img
-                src="/portrait.jpeg"
+                src="/myimage.jpg"
                 alt="portrait"
                 className="translate-y-[-62px]"
               />
             </div>
+
             <p className="absolute top-0 right-0 text-[54px] font-[600] hidden lg:block">
               ABOUT <br /> ME
             </p>
           </div>
-          <div className="flex-1">
+
+          <div className="flex-1 relative z-20">
             <h1 className="text-[18px] font-[500] text-center lg:text-left mb-[1rem]">
               {`<>From Surveying to Front-End Development<> `}
             </h1>
+
             <p className="text-center text-[15px] md:text-[16px] lg:text-left max-w-[700px] text-xl mb-[5rem] md:mb-[3rem]">
               {`...My journey began with a simple curiosity—how do websites work? That curiosity turned into a passion, leading me to a self-taught web dev journey to properly understand HTML, CSS, JavaScript, React, and Tailwind among other tools and frameworks as well.`}{' '}
               <br />
               {`Now, I bring creativity, logic, and user-first design to every project, building seamless digital experiences. Always learning, always creating—let’s build something great together!`}{' '}
             </p>
+
             <div className="flex justify-between mb-[3rem]">
               <p className="text-myGreen">
                 4+ <br />
                 Client Projects <br /> Completed
               </p>
+
               <p className="text-myGreen">
                 3+ <br />
                 Years of <br /> Experience
               </p>
             </div>
-            <div className="flex justify-center lg:block">
+
+            <div className="flex justify-center lg:block relative z-30">
               <Button
                 text="__Git Hub"
-                className="w-[154px] h-[52px] border rounded-3xl cursor-pointer"
+                className="w-[154px] h-[52px] border rounded-3xl cursor-pointer relative z-30"
                 git
                 onClick={openGit}
               />
