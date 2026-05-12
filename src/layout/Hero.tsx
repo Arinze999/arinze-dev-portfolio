@@ -15,12 +15,12 @@ const Hero = () => {
   const loopTextRef = useRef<HTMLParagraphElement>(null);
 
   const descriptions = [
-    'I build thoughtful web products from early ideas into clean, usable, and scalable digital experiences...',
-    'Turning product concepts into responsive interfaces that feel smooth, practical, and easy to use...',
-    'I understand the full journey of building for the web — from planning the user flow to shipping the final experience...',
-    'Writing clean, reusable, and maintainable code that supports real product growth...',
-    'Bringing design, logic, performance, and user experience together to create websites that actually work well...',
-    'Building fast, responsive, and accessible web interfaces across devices, with attention to detail and real user needs...',
+    'I build thoughtful web products from early ideas into clean, usable, scalable, and production-ready digital experiences...',
+    'Turning product concepts into responsive interfaces and backend-connected flows that feel smooth, practical, and easy to use...',
+    'I understand the full journey of building for the web — from planning user flows to connecting APIs, managing data, and shipping the final experience...',
+    'Writing clean, reusable, and maintainable code that supports real product growth, scalability, and long-term improvement...',
+    'Bringing design, logic, performance, accessibility, and product functionality together to create web applications that work well...',
+    'Building fast, responsive, accessible, and API-driven web products across devices, with attention to detail and real user needs...',
   ];
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const Hero = () => {
     };
 
     tl.to(roleElement, {
-      text: '> Front-End Web Developer.',
+      text: '> Software Engineer focused on Web Products',
       duration: 2,
       delay: 0.3,
     }).add(() => {
@@ -115,11 +115,7 @@ const Hero = () => {
 
       {/* big web */}
       <div className="pointer-events-none w-full h-full hidden 2xl:block absolute top-0 left-0 opacity-30 z-0">
-        <img
-          src="/wavewebbig.svg"
-          alt="wavylines"
-          className="w-full h-full"
-        />
+        <img src="/wavewebbig.svg" alt="wavylines" className="w-full h-full" />
       </div>
 
       {/* web */}
@@ -142,11 +138,7 @@ const Hero = () => {
 
       {/* tablet */}
       <div className="pointer-events-none w-full h-full hidden md:block mlg:top-[8.5rem] lg:hidden absolute top-0 left-0 opacity-30 z-0">
-        <img
-          src="/wavetablet.svg"
-          alt="wavylines"
-          className="w-full h-full"
-        />
+        <img src="/wavetablet.svg" alt="wavylines" className="w-full h-full" />
       </div>
 
       <div className="default-margin w-full relative z-10">
@@ -174,7 +166,7 @@ const Hero = () => {
 
             <p
               ref={loopTextRef}
-              className="typing-cursor text-center lg:text-left max-w-[700px] text-[17px] md:text-xl leading-8 mt-7 mb-[3rem] min-h-[6rem] md:min-h-[5rem]"
+              className="typing-cursor h-25 text-center lg:text-left max-w-[700px] text-[17px] md:text-xl leading-8 mt-7 mb-[3rem] min-h-[6rem] md:min-h-[5rem]"
             ></p>
 
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-5 relative z-30 w-full sm:w-fit">
@@ -206,39 +198,64 @@ const Hero = () => {
             {/* floating developer/product icons */}
             <div className="pointer-events-none absolute top-[1rem] left-[0.5rem] sm:left-[4rem] lg:left-[-1rem] z-30 hidden sm:flex items-center gap-2 rounded-full border border-myGreen/40 bg-myBg3/70 backdrop-blur-md px-4 py-2 text-[13px] text-myGreen shadow-lg">
               <span className="text-myWhite">{`</>`}</span>
-              <span>Clean Code</span>
+              <span>Clean Architecture</span>
             </div>
 
-            <div className="pointer-events-none absolute top-[7rem] right-[0.5rem] md:right-[-0.5rem] z-30 md:flex items-center gap-2 rounded-full border border-myWhite/20 bg-myBg3/70 backdrop-blur-md px-4 py-2 text-[13px] text-myWhite shadow-lg">
+            <div className="pointer-events-none absolute top-[12rem] md:top-[7rem] right-[0.5rem] md:right-[-0.5rem] z-30 flex items-center gap-2 rounded-full border border-myWhite/20 bg-myBg3/70 backdrop-blur-md px-4 py-2 text-[13px] text-myWhite shadow-lg">
               <span>⚡</span>
-              <span>Fast UI</span>
+              <span>Fast Web Apps</span>
             </div>
 
             <div className="pointer-events-none absolute bottom-[4rem] left-[0.5rem] md:left-[-1rem] z-30 hidden md:flex items-center gap-2 rounded-full border border-myWhite/20 bg-myBg3/70 backdrop-blur-md px-4 py-2 text-[13px] text-myWhite shadow-lg">
               <span>▣</span>
-              <span>Product Flow</span>
+              <span>Product Systems</span>
             </div>
 
             <div className="pointer-events-none absolute bottom-[1rem] right-[1rem] md:right-[2rem] z-30 hidden sm:flex items-center gap-2 rounded-full border border-myGreen/40 bg-myBg3/70 backdrop-blur-md px-4 py-2 text-[13px] text-myGreen shadow-lg">
               <span>↗</span>
-              <span>Scalable Build</span>
+              <span>Scalable Products</span>
+            </div>
+
+            {/* mobile-visible badges */}
+            <div className="pointer-events-none absolute top-[1rem] left-[0.5rem] z-30 flex sm:hidden items-center gap-2 rounded-full border border-myGreen/40 bg-myBg3/75 backdrop-blur-md px-3 py-2 text-[11px] text-myGreen shadow-lg">
+              <span className="text-myWhite">{`{}`}</span>
+              <span>APIs</span>
+            </div>
+
+            <div className="pointer-events-none absolute bottom-[5rem] left-[0.5rem] z-30 flex sm:hidden items-center gap-2 rounded-full border border-myWhite/20 bg-myBg3/75 backdrop-blur-md px-3 py-2 text-[11px] text-myWhite shadow-lg">
+              <span>🔐</span>
+              <span>Auth Flows</span>
+            </div>
+
+            <div className="pointer-events-none absolute bottom-[1rem] right-[0.5rem] z-30 flex sm:hidden items-center gap-2 rounded-full border border-myGreen/40 bg-myBg3/75 backdrop-blur-md px-3 py-2 text-[11px] text-myGreen shadow-lg">
+              <span>▦</span>
+              <span>Data Driven</span>
             </div>
 
             {/* small decorative code cards */}
             <div
-              className="pointer-events-none absolute top-[4.5rem] left-[1rem] md:left-[2rem] z-20 lg:block rounded-[14px] border border-myWhite/10 bg-myBg3/60 backdrop-blur-md px-4 py-3 text-[12px] text-myWhite/80"
+              className="pointer-events-none absolute top-[4.5rem] left-[1rem] md:left-[2rem] z-20 hidden sm:block rounded-[14px] border border-myWhite/10 bg-myBg3/60 backdrop-blur-md px-4 py-3 text-[12px] text-myWhite/80"
               style={{ animation: 'floatSlow 5.5s ease-in-out infinite' }}
             >
               <p className="text-myGreen">const idea = product;</p>
-              <p>build(idea)</p>
+              <p>ship(build(idea));</p>
             </div>
 
             <div
-              className="pointer-events-none absolute bottom-[6rem] lg:right-[-1rem] z-20  lg:block rounded-[14px] border border-myWhite/10 bg-myBg3/60 backdrop-blur-md px-4 py-3 text-[12px] text-myWhite/80"
+              className="pointer-events-none absolute bottom-[6rem] lg:right-[-1rem] z-20 hidden md:block rounded-[14px] border border-myWhite/10 bg-myBg3/60 backdrop-blur-md px-4 py-3 text-[12px] text-myWhite/80"
               style={{ animation: 'floatReverse 6s ease-in-out infinite' }}
             >
-              <p className="text-myGreen">UX + Logic</p>
-              <p>ship experience</p>
+              <p className="text-myGreen">UX + APIs + Data</p>
+              <p>buildWebProduct();</p>
+            </div>
+
+            {/* mobile code card */}
+            <div
+              className="pointer-events-none absolute top-[5rem] right-[0.5rem] z-20 block sm:hidden rounded-[14px] border border-myWhite/10 bg-myBg3/60 backdrop-blur-md px-3 py-2 text-[10px] text-myWhite/80"
+              style={{ animation: 'floatSlow 5.5s ease-in-out infinite' }}
+            >
+              <p className="text-myGreen">product.flow()</p>
+              <p>api.connect()</p>
             </div>
 
             {/* IMAGE CARD */}

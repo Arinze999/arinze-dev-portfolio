@@ -1,15 +1,16 @@
 const stack = [
-  { title: 'HTML', src: '/html.png' },
-  { title: 'CSS', src: '/css.png' },
   { title: 'Javascript', src: '/js.png' },
   { title: 'Typescript', src: '/ts.png' },
-  { title: 'Bootstrap', src: '/bootstrap.png' },
-  { title: 'Tailwind', src: '/tailwind.png' },
   { title: 'React', src: '/react.png' },
   { title: 'NextJS', src: '/nextwhite.png' },
-  { title: 'Firebase', src: '/firebase.png' },
+  { title: 'Tailwind', src: '/tailwind.png' },
+  { title: 'ShadCN', src: '/shadcn.png' },
+  { title: 'NodeJS', src: '/nodejs.png' },
+  { title: 'ExpressJS', src: '/expressjs.png' },
+  { title: 'Prisma', src: '/prisma.png' },
   { title: 'Supabase', src: '/supabase.png' },
-  { title: 'MySQL', src: '/sql.png' },
+  { title: 'Firebase', src: '/firebase.png' },
+  { title: 'PostgreSQL', src: '/postgresql.png' },
 ];
 
 const Stack = () => {

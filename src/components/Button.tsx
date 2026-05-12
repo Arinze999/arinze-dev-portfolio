@@ -14,6 +14,7 @@ const Button = ({
   icon?: boolean;
   git?: boolean;
   live?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onClick?: any;
 }) => {
   return (

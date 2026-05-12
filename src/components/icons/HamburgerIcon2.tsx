@@ -9,7 +9,7 @@ type HamburgerIcon2Props = {
 
 const HamburgerIcon2: React.FC<HamburgerIcon2Props> = ({
   color = 'white',
-  width = 32,
+  width = 20,
   isOpen,
   onClick,
 }) => {

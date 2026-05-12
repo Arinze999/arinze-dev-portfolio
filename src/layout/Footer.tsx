@@ -11,7 +11,7 @@ const Footer = () => {
 
         <div className="flex flex-col lg:flex-row justify-between gap-[2rem]">
           <a
-            href="/pdf/Akanaga_Uzoma_Arinze_CV_2026.pdf"
+            href="/pdf/Akanaga_Uzoma_Arinze(software-engineer)_CV_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="border w-[13rem] h-[147px] rounded-[10px] flex flex-col justify-around items-center cursor-pointer relative z-20"
