@@ -182,7 +182,7 @@ const About = () => {
               </div>
 
               <div className="rounded-[20px] border-2 border-myWhite/10 bg-myBg3/40 p-4 text-center lg:text-left">
-                <p className="text-[28px] font-[700] text-myGreen">3+</p>
+                <p className="text-[28px] font-[700] text-myGreen">4</p>
                 <p className="text-[13px] text-myWhite/70">
                   Years building for the web
                 </p>
